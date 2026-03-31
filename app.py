@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request,render_template, jsonify
 from flask_cors import CORS
 import joblib
 import numpy as np
@@ -82,6 +82,9 @@ def minimax_hybrid(board, depth, alpha, beta, is_maximizing):
 
 
 # --- ROUTES API ---
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/predict_ml', methods=['POST'])
 def predict_ml():

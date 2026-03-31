@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morpion ISPM - IA & Machine Learning</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <h1>Morpion Intelligent</h1>
+
+  <div class="controls">
+    <label for="modeSelect">Choisir l'adversaire :</label>
+    <select id="modeSelect">
+      <option value="human">👤 vs Humain (Local)</option>
+      <option value="ml">🤖 vs IA Pure (ML)</option>
+      <option value="hybride">🧠 vs IA Hybride (Minimax + ML)</option>
+    </select>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="status" id="status">À vous de jouer (O)</div>
+
+  <div class="actions">
+    <button id="resetBtn">Recommencer la partie</button>
+  </div>
+
+<script src="/static/script.js"></script></body>
+</html>
