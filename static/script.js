@@ -32,7 +32,16 @@ async function handleHumanClick(index) {
     if (mode === "human") {
         // Logique classique entre deux humains
         cells[index].textContent = currentPlayer;
-        if (checkGameOver()) return;
+         if (currentPlayer=="O") {
+            cells[index].style.background='blue';
+        }else{
+            cells[index].style.background='red';
+        }
+        
+        if (checkGameOver()) {
+            boardElement.style.opacity=0.2;
+            return;
+        } 
         currentPlayer = currentPlayer === "X" ? "O" : "X";
         statusText.textContent = `Tour du joueur ${currentPlayer}`;
     } else {
@@ -40,11 +49,20 @@ async function handleHumanClick(index) {
         if (currentPlayer !== "O") return;
 
         cells[index].textContent = "O";
-        if (checkGameOver()) return;
+         if (currentPlayer=="O") {
+            cells[index].style.background='blue';
+        }else{
+            cells[index].style.background='red';
+        }
+                if (checkGameOver()) {
+            boardElement.style.opacity=0.2;
+            return;
+        } 
 
         currentPlayer = "X";
         statusText.textContent = "L'IA réfléchit...";
         await makeAIMove();
+          
     }
 }
 
@@ -63,17 +81,27 @@ async function makeAIMove() {
         });
 
         const data = await response.json();
+        console.log(data);
+        
         const move = data.move;
 
         if (move !== -1) {
             cells[move].textContent = "X";
             cells[move].classList.add("x-mark");
-
+         if (currentPlayer=="O") {
+            cells[move].style.background='blue';
+        }else{
+            cells[move].style.background='red';
+        }
             if (!checkGameOver()) {
                 currentPlayer = "O";
                 statusText.textContent = "À vous de jouer (O)";
             }
         }
+            if (checkGameOver()) {
+            boardElement.style.opacity=0.2;
+            return;
+        } 
     } catch (error) {
         console.error("Erreur de connexion au serveur Flask :", error);
         statusText.textContent = "Erreur: Serveur Python non lancé";
@@ -90,7 +118,8 @@ function checkGameOver() {
     for (let pattern of winPatterns) {
         const [a, b, c] = pattern;
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            statusText.textContent = `Le joueur ${board[a]} a gagné !`;
+            statusText.textContent = `Le joueur '${board[a]}' a gagné !`;
+            // statusText.style.fontSize='50px'
             gameActive = false;
             return true;
         }
@@ -103,12 +132,18 @@ function checkGameOver() {
     }
     return false;
 }
-
+modeSelect.addEventListener("change", () => {
+    reset()
+});
 resetBtn.addEventListener("click", () => {
+    reset()
+});
+const reset = ()=>{
     gameActive = true;
     currentPlayer = "O";
     statusText.textContent = "À vous de jouer (O)";
     createBoard();
-});
+    boardElement.style.opacity=1;
 
+}
 createBoard();

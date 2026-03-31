@@ -101,7 +101,11 @@ def predict_ml():
             if val > best_val:
                 best_val = val
                 best_move = i
-    return jsonify({"move": best_move})
+    
+    return jsonify({
+    "move": best_move,
+    "val": best_val
+})
 
 
 @app.route('/predict_hybrid', methods=['POST'])
@@ -120,8 +124,10 @@ def predict_hybrid():
             if val > best_val:
                 best_val = val
                 best_move = i
-    return jsonify({"move": best_move})
-
+    return jsonify({
+    "move": best_move,
+    "val": best_val
+    })
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
