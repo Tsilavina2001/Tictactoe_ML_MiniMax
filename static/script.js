@@ -81,7 +81,6 @@ async function makeAIMove() {
         });
 
         const data = await response.json();
-        console.log(data);
         
         const move = data.move;
 
