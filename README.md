@@ -48,4 +48,5 @@ www.ispm-edu.com
     Oui, le joueur hybride evite mieux les pièges.
     IA-ML pur peut-être parfois imprécise que l'hybride qui est plus proche d’un joueur optimal
 
-#Video presentation :video_presentation
+#Video presentation :Demonstration : https://drive.google.com/file/d/18-8AkYqJVMnLWHnVyv9ZBb-XsKIc-dyH/view?usp=drivesdk
+                     Presentation : https://drive.google.com/file/d/1YtkOoGwzE_oOoYSwDRQzc9ct-pFIwwk-/view?usp=drivesdk
