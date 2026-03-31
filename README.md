@@ -6,11 +6,11 @@ Examen S1 M1 Machine Learning
 
 # Nom du groupe:    Projet Matotra Be
 # Les memmbres du groupe: 
--RATOVOMANALINA Sitraka Mamy n°19
--ANDRIANARIARIMANANA Manoasoa n°21
--RAMALARISON Tsiory n°22
--RANDRIAMAHEFA Tsilavina Mia n°23                      
--RANDRIANTSEHENO Mitandro Arivelo n°24
+-RATOVOMANALINA Sitraka Mamy n°19 <br>
+-ANDRIANARIARIMANANA Manoasoa n°21 <br>
+-RAMALARISON Tsiory n°22 <br>
+-RANDRIAMAHEFA Tsilavina Mia n°23  <br>                 
+-RANDRIANTSEHENO Mitandro Arivelo n°24<br>
 
 
 # Description du projet
