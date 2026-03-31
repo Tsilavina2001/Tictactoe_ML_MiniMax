@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request,render_template, jsonify
 from flask_cors import CORS
 import joblib
 import numpy as np
@@ -82,6 +82,9 @@ def minimax_hybrid(board, depth, alpha, beta, is_maximizing):
 
 
 # --- ROUTES API ---
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/predict_ml', methods=['POST'])
 def predict_ml():
@@ -98,7 +101,11 @@ def predict_ml():
             if val > best_val:
                 best_val = val
                 best_move = i
-    return jsonify({"move": best_move})
+    
+    return jsonify({
+    "move": best_move,
+    "val": best_val
+})
 
 
 @app.route('/predict_hybrid', methods=['POST'])
@@ -117,8 +124,10 @@ def predict_hybrid():
             if val > best_val:
                 best_val = val
                 best_move = i
-    return jsonify({"move": best_move})
-
+    return jsonify({
+    "move": best_move,
+    "val": best_val
+    })
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
