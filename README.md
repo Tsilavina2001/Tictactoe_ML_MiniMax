@@ -9,7 +9,7 @@ Examen S1 M1 Machine Learning
 -RATOVOMANALINA Sitraka Mamy n°19 <br>
 -ANDRIANARIARIMANANA Manoasoa n°21 <br>
 -RAMALARISON Tsiory n°22 <br>
--RANDRIAMAHEFA Tsilavina Mia n°23  <br>                 
+-RANDRIAMAHEFA Tsilavina Mia n°23 <br>                 
 -RANDRIANTSEHENO Mitandro Arivelo n°24<br>
 
 
