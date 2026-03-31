@@ -3,6 +3,7 @@ Examen S1 M1 Machine Learning
 
  #               INSTITUT SURERIEUR POLYTHECNIQUE DE MADAGASCAR
 #                           MACHINE LEARNING
+www.ispm-edu.com
 
 # Nom du groupe:    Projet Matotra Be
 # Les memmbres du groupe: 
@@ -19,6 +20,7 @@ Examen S1 M1 Machine Learning
     -Fichier "templates" qui comporte le bases "index.html" du front-end.
     -"app.py" contient le serveur flask et le fonction utilisable de minimax.
     -"generator.py" se trouve le generation du dataset.
+    -"requirements.txt" dependances du projet (pip install -r requirements.txt)
   
 
 # Résultats Machine Learning
